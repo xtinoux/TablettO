@@ -1,0 +1,151 @@
+<html>
+  <head>
+      <meta charset="utf-8" />
+    <title>{{titre}}</title>
+    <meta content="">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='icones/css/font-awesome.min.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
+
+
+
+  </head>
+  <body>
+  <div id="div-left">
+
+    <div class="titre" style="text-align:center;"><h1><span id="logo" style="margin-left:-8px;font-size:50px;">O</span></h1></div>
+
+
+  <ul>
+    <a href="/"><li> <i class="fa fa-home fa-2x"></i> </li></a>
+    <a href="/Sauvegarde"<li><li> <i class="ico-menu fa fa-file-archive-o fa-2x"></i></li></a>
+    <a href="/Restaure"<li><li> <i class="ico-menu fa fa-tablet fa-2x" style="margin-left:2px;"></i></li></a>
+    <a href="/Deploie"<li><li> <i class="ico-menu fa fa-tablet fa-2x" style="margin-left:-3px;"></i><i class="ico-menu fa fa-tablet fa-2x" style="margin-left:-10px;" ></i></li></a>
+    <a href="/Devices"<li><li> <i class="ico-menu fa fa-info-circle  fa-2x"></i> </li></a>
+    <a href="/Applications"<li><li> <i class="fa fa-play-circle-o fa-2x"></i></li></a>
+    <a href="/Systeme"<li><li> <i class="ico-menu fa fa-cogs fa-2x"></i></li></a>
+  </ul>
+
+
+
+
+</div>
+
+
+
+
+<div id="div-right">
+
+
+
+
+<div id="app" class="content" style="background:url('static/images/fond_1.png');">
+  <h2>Sauvegarde <br/>
+  <i id="ico" class="Recharger fa fa-spinner fa-3x "></i><div>
+   </h2>
+
+  <form id="sauv" action="" method="post" style="padding-left:20px;margin-top:50px;">
+
+    {% if nbdevices == 1 %}
+    Sauvegarde du device {{devices["device1"][1]}}
+    {%endif %}
+    {% if nbdevices != 1 %}
+    Séléctionner le device à sauvegarder
+    <br />
+    <select id="listdevice" name="key_device"  style="margin-left:20px;margin-top:5px;"/>
+    {% for key,value in devices.items(): %}
+    <option value="{{ key }}" selected>{{value[1]}} </option>
+    {% endfor %}
+    </select>
+    {%endif %}
+
+
+    <p> Entrer le nom du backup  : </p>
+  	<input  id="champtext" type="text" name="nom_backup" value="backup" style="margin-left:20px;margin-top:5px;" />
+<br/>
+
+<input type="submit" value="Démarrer la sauvegarde" style="margin-top:30px;" onclick="document.getElementById('ico').className='fa fa-spinner fa-pulse fa-3x';" />
+
+  </form>
+</div>
+</div>
+
+
+
+<div id="message">
+<div  id="device0" class="messagebox">
+    <h1  class="messagealerte"> <i class="fa fa-usb"></i> Aucun périphérique n'a été détécté</h1>
+    <p> Brancher le périphérique  et activer le mode débugage USB</p>
+    <div class="sortie">
+      <a href=""><i class="fa fa-refresh fa-1x "></i><a>
+    </div>
+</div>
+
+<div id="backup0" class="messagebox">
+  <h1 class="messagealerte"> <i class="fa fa-exclamation-triangle"></i> Aucune sauvegarde n'a été trouvé.</h1>
+  <p> Aucune sauvegarde n'a été trouvé.<br/>
+  Vérifier qu'une sauvegarde est présente dans /media/Backups/Backups</p>
+  <div class="sortie">
+    <a href="">  OK </a>
+  </div>
+</div>
+
+
+<div id="sauvegarde0" class="messagebox">
+  <h1 class="messagealerte"> <i class="fa fa-exclamation-triangle"></i> La sauvegarde a échouée.</h1>
+  <p> La taille de la sauvegarde est de 0 octet, un problème est survenu.</p>
+  <div class="sortie">
+    <a href="/">  OK </a>
+  </div>
+</div>
+
+
+<div id="messagefin" class="messagebox">
+  <h1 class="messagealerte"> <i class="fa fa-info-circle"></i>  La sauvegarde est terminée.</h1>
+  <p> La sauvegarde  de {{nom_device }}a été placée dans /media/Backups/Backups/{{nom_backup}}.
+  <br/>Sa taille est de {{taille}}
+  </p>
+  <div class="sortie">
+  <a href="/">  OK</a>
+  </div>
+</div>
+
+
+
+
+
+
+{% if messagebox !="" %}
+<script>
+document.getElementById('message').style.display="flex";
+</script>
+{% endif %}
+{% if messagebox =="device" %}
+<script>
+document.getElementById('device0').style.display="block";
+</script>
+{% endif%}
+{% if messagebox =="sauvegarde" %}
+<script>
+document.getElementById('sauvegarde0').style.display="block";
+</script>
+{% endif%}
+{% if messagebox =="backup" %}
+<script>
+document.getElementById('backup0').style.display="block";
+</script>
+{% endif%}
+{% if messagebox =="messagefin" %}
+<script>
+document.getElementById('messagefin').style.display="block";
+</script>
+{% endif%}
+
+
+
+  </body>
+  </html>

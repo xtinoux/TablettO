@@ -1,0 +1,76 @@
+<html>
+  <head>
+      <meta charset="utf-8" />
+    <title>{{titre}}</title>
+    <meta content="">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='icones/css/font-awesome.min.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
+
+
+  </head>
+  <body>
+  <div id="div-left">
+
+    <div class="titre" style="text-align:center;"><h1><span id="logo" style="margin-left:-8px;font-size:50px;">O</span></h1></div>
+
+
+  <ul>
+    <a href="/"><li> <i class="fa fa-home fa-2x"></i> </li></a>
+    <a href="/Sauvegarde"<li><li> <i class="ico-menu fa fa-file-archive-o fa-2x"></i></li></a>
+    <a href="/Restaure"<li><li> <i class="ico-menu fa fa-tablet fa-2x" style="margin-left:2px;"></i></li></a>
+    <a href="/Deploie"<li><li> <i class="ico-menu fa fa-tablet fa-2x" style="margin-left:-3px;"></i><i class="ico-menu fa fa-tablet fa-2x" style="margin-left:-10px;" ></i></li></a>
+    <a href="/Devices"<li><li> <i class="ico-menu fa fa-info-circle  fa-2x"></i> </li></a>
+    <a href="/Applications"<li><li> <i class="fa fa-play-circle-o fa-2x"></i></li></a>
+    <a href="/Systeme"<li><li> <i class="ico-menu fa fa-cogs fa-2x"></i></li></a>
+  </ul>
+
+
+
+
+</div>
+
+
+
+
+<div id="div-right">
+
+
+
+
+<div id="app" class="content" style="background:url('static/images/fond_6.png');position:relative;">
+<h2>Applications <br/>
+<i id="ico" class="Recharger fa fa-spinner fa-3x "></i>
+</h2>
+
+<div id="corps_app" style="background-color:#444;font-size:14px;min-width:calc(100% - 180px);";>
+
+
+
+<form id="sauv" action="" method="post" style="padding-left:20px;margin-top:50px;">
+
+{% for key,values in dicApps.items() %}
+<fieldset  style="border:none;">
+                <legend><h2 class="textfield" style="border:none;"> {{key }} </h2></legend>
+
+
+
+
+  {% for value in values %}
+    <input type="checkbox"  name="checkO" value={{value}} style="margin-left:15px;"/>{{value}}</br>
+  {%endfor%}
+          </fieldset>
+{%endfor%}
+
+<input id="installer" type="submit" name="submit" value="Installer" style="background-color:rgba(3,3,3,0.5);position:absolute;bottom:20px;right:20px; margin-right:10px;margin-bottom:10px;font-size:24px;color:gray;border:none;" onmouseover="document.getElementById('installer').style.boxShadow='1px 1px 5px #333'" onmouseout="document.getElementById('installer').style.boxShadow='none'"/>
+</form>
+</div>
+
+</div>
+
+  </body>
+  </html>

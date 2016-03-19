@@ -1,0 +1,149 @@
+<html>
+  <head>
+      <meta charset="utf-8" />
+    <title>{{titre}}</title>
+    <meta content="">
+
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/accueil.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='icones/css/font-awesome.min.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
+
+
+    <style>
+
+     </style>
+  </head>
+  <body>
+  <div id="div-left">
+
+    <div class="titre" style="text-align:center;"><h1>Tablett <span id="logo" style="margin-left:-8px;font-size:50px;">O</span></h1></div>
+
+
+  <ul>
+    <a href=""><li id="Accueil_m"
+      onmouseover="document.getElementById('Accueil_m').style.paddingLeft='25px';"
+      onmouseout="document.getElementById('Accueil_m').style.paddingLeft='15px';"
+      > <i class="fa fa-home fa-2x"></i> <span> Accueil </span></li></a>
+    <a  href="/Sauvegarde"><li id="Sauvegarde_m"
+      onmouseover="document.getElementById('Sauvegarde_m').style.paddingLeft='25px';"
+      onmouseout="document.getElementById('Sauvegarde_m').style.paddingLeft='15px';"
+      > <i class="ico-menu fa fa-file-archive-o fa-2x"></i><span> Sauvegarde </span></li></a>
+    <a  href="/Restaure"><li id="Restaure_m"
+      onmouseover="document.getElementById('Restaure_m').style.paddingLeft='25px';"
+      onmouseout="document.getElementById('Restaure_m').style.paddingLeft='15px';"
+      > <i class="ico-menu fa fa-tablet fa-2x"></i><span> Restaure</span></li>
+    <a  href="/Restaure"><li id="Deploie_m"
+      onmouseover="document.getElementById('Deploie_m').style.paddingLeft='25px';"
+      onmouseout="document.getElementById('Deploie_m').style.paddingLeft='15px';"
+      > <i class="ico-menu fa fa-tablet fa-2x" style="margin-left:-8px;"></i><i class="ico-menu fa fa-tablet fa-2x" style="margin-left:-10px;" ></i><span> Déploie </span> </li>
+    </a>
+
+
+
+    <li> <i class="ico-menu fa fa-info-circle  fa-2x"></i><span>Info Devices </span> </li>
+    <li> <i class="fa fa-play-circle-o fa-2x"></i><span>Applications </span> </li>
+    <li> <i class="ico-menu fa fa-cogs fa-2x"></i><span> Système  </span></li>
+  </ul>
+
+
+
+
+</div>
+
+
+
+
+<div id="div-right">
+
+
+
+
+<div id="sauvegarde" class="content" style="background:url('static/images/fond_1.png');" onclick="location.href='/Sauvegarde';">
+<p id="icone" style="margin:auto;width:405px%;display:flex;position: relative; z-index: 2;">
+          <i class="fa fa-tablet fa-5x" style="margin:auto;padding-left:15px;"></i>
+          <i class="fa fa-arrow-right fa-3x " style="margin:auto;padding-left:15px;" ></i>
+          <i class="fa fa-file-archive-o fa-4x" style="margin:auto;padding-left:15px;"></i>
+</p>
+<div id="sauvegarde_text" class="text-long" onmouseover="document.getElementById('sauvegarde_text').style.top='0px';"
+onmouseout="document.getElementById('sauvegarde_text').style.top='calc(100% - 55px)';">
+<h2> Sauvegarde </h2> <p> Creer un backup d'un device android, la sauvegarde contient :
+<ul style="margin-top:10px;padding-left:15px;">
+<li> Les applications & leurs parametres</li>
+<li> L'agencement de la home</li>
+<li> Les fichiers stockés sur le device</li>
+</ul>
+ </p></div>
+</div>
+
+
+
+<div id="restaure" class="content" style="background:url('static/images/fond_2.png');" onclick="location.href='/Restaure';">
+  <p id="icone" style="margin:auto;width:405px%;display:flex;position: relative; z-index: 2;">
+          <i class="fa fa-file-archive-o fa-4x" style="margin:auto;padding-left:15px;"></i>
+          <i class="fa fa-arrow-right fa-3x " style="margin:auto;padding-left:15px;" ></i>
+          <i class="fa fa-tablet fa-5x" style="margin:auto;padding-left:15px;"></i>
+
+  </p>
+  <div id="restaure_text" class="text-long" onmouseover="document.getElementById('restaure_text').style.top='0px';"
+  onmouseout="document.getElementById('restaure_text').style.top='calc(100% - 55px)';">
+   <h2> Restaure </h2>
+    <p> Restaure un backup sur un device
+  <ul style="margin-top:10px;padding-left:15px;">
+
+   </ul>
+   </p></div>
+  </div>
+
+
+
+
+<div  id="deploie" class="content" style="background:url('static/images/fond_3.png');" onclick="location.href='/Deploie';" >
+  <p id="icone" style="margin:auto;width:405px%;display:flex;position: relative; z-index: 2;">
+          <i class="fa fa-file-archive-o fa-4x" style="margin:auto;padding-left:15px;"></i>
+          <i class="fa fa-arrow-right fa-3x " style="margin:auto;padding-left:15px;" ></i>
+          <i class="fa fa-tablet fa-5x" style="margin:auto;padding-left:15px;"></i>
+          <i class="fa fa-tablet fa-5x" style="margin:auto;padding-left:15px;"></i>
+
+  </p>
+  <div id="deploie_text" class="text-long" onmouseover="document.getElementById('deploie_text').style.top='0px';"
+  onmouseout="document.getElementById('deploie_text').style.top='calc(100% - 55px)';">
+  <h2> Déploie </h2>
+  <p> Restaure un backup sur tous les devices connecté </p>
+  <ul style="margin-top:10px;padding-left:15px;">
+  </ul>
+   </p></div>
+
+
+</div>
+
+
+<div id="systeme"  class="content" style="background:url('static/images/fond_4.png');">
+  <p id="icone" style="margin:auto;width:405px%;display:flex;position: relative; z-index: 2;">
+  <i class="fa fa-cogs fa-4x" style="margin:auto;padding-left:15px;"></i>
+  </p>
+</div>
+
+<div id="applications"  class="content" style="background:url('static/images/fond_5.png');">
+  <p id="icone" style="margin:auto;width:405px%;display:flex;position: relative; z-index: 2;">
+  <i class="fa fa-play-circle-o fa-4x" style="margin:auto;padding-left:15px;"></i>
+  </p>
+</div>
+
+<div id="device"  class="content" style="background:url('static/images/fond_6.png');">
+  <p id="icone" style="margin:auto;width:405px%;display:flex;position: relative; z-index: 2;">
+  <i class="fa fa-info-circle  fa-4x" style="margin:auto;padding-left:15px;"></i>
+  </p>
+</div>
+
+<div id="apropos"  class="content" style="background:url('static/images/fond_1.png');">
+  <p id="icone" style="margin:auto;width:405px%;display:flex;position: relative; z-index: 2;">
+  <i class="fa fa-question-circle fa-4x" style="margin:auto;padding-left:15px;"></i>
+  </p>
+</div>
+</div>
+  </body>
+  </html>

@@ -1,0 +1,143 @@
+<html>
+  <head>
+      <meta charset="utf-8" />
+    <title>{{titre}}</title>
+    <meta content="">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+      <style>
+
+      body{
+        margin:0px;
+        padding: 0px;
+        background-color: #8b204e;
+        font-family: 'Open Sans', sans-serif;    }
+
+    .message
+    {
+      width: 100%;
+      height: 100%;
+      display:flex;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.6);
+      #visibility: hidden;
+      position:absolute;
+      top:0px;
+      left:0px;
+    }
+
+    .messagebox
+    {
+position:relative;
+      padding:10px;
+      width: 70%;
+      max-width: 500px;
+      height:40%;
+      max-height: 400px;
+      margin:auto;
+      box-shadow: 1px 1px 50px #555;
+      #background-color: rgba(0, 0, 0, 0.01);
+      border-radius: 12px;
+      color:#eee;
+
+    }
+
+    .sortie{
+      font-size: 1.8em;
+      font-weight: bold;
+        position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    h1.messagealerte{
+      padding:10px;
+      color:#008184;
+
+    }
+
+    #device0{
+      display:none;
+    }
+
+
+    #backup0{
+      display:none;
+    }
+
+    .actionfin{
+      display:none;
+    }
+
+    #actiontab{
+      display:none;
+    }
+    .principale{
+        color:#eee;
+        padding:40px;
+
+
+    }
+    </style>
+  </head>
+  <body>
+  <div class="principale">
+
+dgsdgsdgdsgsdgdsgsxccxwc
+dgsdgsdgdsgsdgdsgsxccxwcdgsdgsdgdsgsdgdsgsxccxwcdgsdgsdgdsgsdgdsgsxccxwc
+
+dgsdgsdgdsgsdgdsgsxccxwcdgsdgsdgdsgsdgdsgsxccxwc
+dgsdgsdgdsgsdgdsgsxccxwcv
+dgsdgsdgdsgsdgdsgsxccxwcdgsdgsdgdsgsdgdsgsxccxwcdgsdgsdgdsgsdgdsgsxccxwc
+dgsdgsdgdsgsdgdsgsxccxwcdgsdgsdgdsgsdgdsgsxccxwc
+dgsdgsdgdsgsdgdsgsxccxwcdgsdgsdgdsgsdgdsgsxccxwc
+
+</div>
+
+
+<div class="message">
+<div  id="device0" class="messagebox">
+    <h1  class="messagealerte"> <i class="fa fa-usb"></i> Aucun périphérique n'a été détécté</h1>
+    <p>
+      Brancher le périphérique  et activer le mode débugage USB
+    </p>
+  <div class="sortie">
+    <i class="fa fa-refresh fa-2x "></i>
+  </div>
+</div>
+</div>
+
+
+<div class="message">
+<div id="backup0" class="messagebox">
+  <h1 class="messagealerte"> <i class="fa fa-exclamation-triangle"></i> Aucune sauvegarde n'a été trouvé.</h1>
+  <p>
+    Aucune sauvegarde n'a été trouvé.<br/>
+    Vérifier qu'une sauvegarde est présente dans /media/Backups/Backups
+  </p>
+  <div class="sortie">
+    OK
+  </div>
+</div>
+</div>
+
+<div class="message">
+<div id="actionfin" class="messagebox">
+  <h1 class="messagealerte"> <i class="fa fa-info-circle"></i>  La sauvegarde est terminée.</h1>
+  <p>
+    <br/>
+    La sauvegarde  a été placée dans /media/Backups/Backups/{{}}.
+    <br/>Sa taille est de ...
+  </p>
+  <div class="sortie">
+    OK
+  </div>
+</div>
+</div>
+
+  </body>
+</html>
