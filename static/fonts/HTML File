@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style>
+    @font-face {
+  font-family: "IndieFlower";
+  src: url("static/fonts/IndieFlower.ttf");
+  font-family: "MrsSheppards-Regular";
+  src: url("static/fonts/MrsSheppards-Regular.ttf");
+
+}
+    body{font-family: IndieFlower;}
+
+    </style>
+  </head>
+  <body>xwvwxcvcxvbwxcbvbwvbwbbvcb</body>
+</html>

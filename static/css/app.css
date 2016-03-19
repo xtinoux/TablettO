@@ -1,0 +1,181 @@
+    body{
+      margin:0px;
+      padding: 0px;
+      background-color: #8b204e;
+      background: url('../images/fond_appli.jpg');
+      font-family: 'Open Sans', sans-serif;
+      color:#ABABAB;
+       }
+    #div-left
+    {
+      width: 70px;
+      height: 100%;
+      display:inline-block;
+      background-color: rgba(0, 0, 0, 0.5);
+      #visibility: hidden;
+      position:fixed;
+      top:0px;
+      left:0px;
+    }
+
+
+      a{
+        margin:0px;
+        padding: 0px;
+        font-family: 'Open Sans', sans-serif;
+        color:#ABABAB;
+        text-decoration: none;
+      }
+
+
+    ul{
+      padding-left: 0px;
+      list-style-type: none;
+      margin-top: 100px;
+    }
+
+    li{ height: 50px;
+        margin-left:0px;
+        padding-top: 10px;
+        padding-left: 15px;
+      border-bottom: 2px solid  #eee;
+    }
+
+    #div-right
+    { display: inline-block;
+      margin-left:110px;
+      height: 100%;
+       width: 100%;
+       padding:30px;
+      position:fixed;
+      top:0px;
+      left:0px;
+    }
+    .content{
+      display:flex;
+      overflow: hidden;
+
+    }
+    .ico{
+      width: 399px;
+      height: 275px;
+    }
+    .text{
+      display: inline-block;
+      margin-top:200px;
+      padding: 15px;
+      width: 499px;
+      height: 275px;
+
+      background-color: rgba(0, 0, 0, 0.51);
+    }
+
+    h2{margin:0px;
+    text-align: right;
+    padding:10px;
+    color:#008184;
+    display: flex;
+    width: 180px;
+    padding-right: 20px;
+    border-right: 1px solid #008184;
+    font-family:Indie Flower, cursive;
+    font-size: 36px;
+}
+
+
+#message
+{ position:fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  display:none;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  #visibility: hidden;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+.messagebox
+{display:none;
+position:relative;
+  padding:10px;
+  width: 70%;
+  max-width: 500px;
+  height:40%;
+  max-height: 400px;
+  margin:auto;
+  box-shadow: 1px 1px 50px #555;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  color:#eee;
+
+}
+
+.sortie{
+  font-size: 1.8em;
+  font-weight: bold;
+    position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+h1.messagealerte{
+  padding:10px;
+  color:#008184;
+
+}
+
+#app{
+width:80%;
+height: 80%;
+margin-top:5%;
+
+
+}
+
+
+span{
+margin-left: 10px;
+}
+
+.vertcenter{
+margin: auto;
+display: inline;
+}
+
+#logo{
+  font-family: 'Mrs Sheppards', cursive;
+  }
+
+#sauv{
+  font-family: 'Open Sans', sans-serif;
+  color:#ABABAB;
+}
+#listdevice{
+  background: none;
+  border:none;
+    font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  color:#ABABAB;
+
+
+}
+#champtext{
+  background: none;
+  border:none;
+  border-bottom: 1px solid #ABABAB;
+  box-shadow: 1px 0px 12px #CDCDCD;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  color:#CDCDCD;
+
+}
+
+#ico{
+  margin:auto;
+  margin-left: -125px;
+
+} 

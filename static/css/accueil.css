@@ -1,0 +1,169 @@
+  body{
+      margin:0px;
+      padding: 0px;
+      background-color: #8b204e;
+      background: url('../images/fond_appli.jpg');
+      font-family: 'Open Sans', sans-serif;
+      color:#ABABAB;
+       }
+
+  a{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color:#ABABAB;
+    text-decoration: none;
+  }
+
+
+
+      h2{margin:0px;
+    text-align: right;
+    padding:10px;
+    color:#008184;
+    display: flex;
+    width: 150px;
+    padding-right: 20px;
+    border-right: 1px solid #008184;
+    font-family:Indie Flower, cursive;
+    font-size: 36px;
+}
+
+    #div-left
+    {
+      width: 200px;
+      height: 100%;
+      display:inline-block;
+      background-color: rgba(0, 0, 0, 0.5);
+      #visibility: hidden;
+      position:fixed;
+      top:0px;
+      left:0px;
+    }
+
+
+
+    ul{
+      padding-left: 0px;
+      list-style-type: none;
+      margin-top: 100px;
+    }
+
+    li{ height: 50px;
+        margin-left:0px;
+        padding-top: 10px;
+        padding-left: 15px;
+      border-bottom: 2px solid  #eee;
+    }
+
+    #div-right
+    { display: block;
+       height: 100%;
+       width: 100%;
+       margin:0px;
+       margin-left:200px;
+
+       position:absolute;
+      top:0px;
+      left:0px;
+    }
+    .content{
+      display:flex;
+      overflow: hidden;
+
+    }
+    .ico{
+      width: 399px;
+      height: 275px;
+    }
+    .text-long{
+      display: block;
+      padding: 15px;
+      padding-left:30px;"
+      width: 100%;
+      min-width: 100%;
+      height: 100%;
+
+      background-color: rgba(0, 0, 0, 0.51);
+
+      position: absolute;
+      top:calc(100% - 55px);
+      left:0px; z-index: 4;
+
+    }
+
+    h2{margin:-10px;
+      padding-top: 0px;
+      border:none;
+    text-align: right;}
+
+
+
+#sauvegarde{
+position:absolute;
+top:10%;
+left: 5%;
+width: 37%;
+height: 40%;
+
+}
+#restaure{
+position:absolute;
+top:55%;
+left: 5%;
+width: 37%;
+height: 40%;
+}
+
+
+#deploie{
+  position:absolute;
+top:10%;
+  left: 45%;
+width: 37%;
+height: 40%;
+}
+
+
+#systeme{
+  position:absolute;
+top:55%;
+  left: 45%;
+   height: 19%;
+  width: 18%;
+}
+#applications{
+  position:absolute;
+ top:55%;
+  left: 64%;
+   height: 19%;
+  width: 18%;
+}
+#device{
+  position:absolute;
+  top:76%;
+  left: 45%;
+   height: 19%;
+  width: 18%;
+}
+#apropos{
+  position:absolute;
+  top:76%;
+  left: 64%;
+   height: 19%;
+  width: 18%;
+
+}
+span{
+margin-left: 10px;
+}
+
+.vertcenter{
+margin: auto;
+display: inline;
+}
+
+#logo{
+  font-family: 'Mrs Sheppards', cursive;
+
+  }
